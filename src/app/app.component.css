@@ -1,0 +1,13 @@
+.header {
+    background-color: black;
+    position: relative;
+    z-index: 10;
+}
+
+.all {
+    border-radius: 12px;
+    display: flex;
+    height: calc(100svh - 50px);
+    background-color: white;
+}
+

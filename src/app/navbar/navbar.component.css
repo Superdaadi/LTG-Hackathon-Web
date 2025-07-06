@@ -1,0 +1,15 @@
+.nav {
+    background-color: black;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    z-index: 22;
+    box-shadow: var(--f2) 0px 2px 18px -4px;
+}
+
+.heading {
+    color: var(--f2);
+    font-family: var(--jers);
+    font-size: 45px;
+}
