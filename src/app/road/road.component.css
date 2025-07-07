@@ -42,3 +42,18 @@
   font-size: 66px;
   transition: left 0.5s ease, top 0.5s ease;
 }
+
+
+.start-button {
+  font-family: var(--jers);
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--f2);
+  font-size: 42px;
+  border-radius: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+}

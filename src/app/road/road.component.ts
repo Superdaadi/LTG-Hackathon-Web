@@ -12,10 +12,12 @@ export class RoadComponent {
   currentPosition = 0;
 
   pathPoints = [
-    { x: 5, y: 10 },
-    { x: 40, y: 14 },
-    { x: 75, y: 12 },
-    { x: 95, y: 42 },
+    { x: 5, y: 30 },
+    { x: 20, y: 40 },
+    { x: 35, y: 30 },
+    { x: 50, y: 40 },
+    { x: 65, y: 30 },
+    { x: 80, y: 40 },
   ];
 
   constructor(private router: Router){}
