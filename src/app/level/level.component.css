@@ -1,0 +1,134 @@
+.full {
+    display: flex;
+    width: 100vw;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    height: calc(100svh - 58px);
+    border-right: 3px solid rgb(69, 69, 69);
+    width: 16rem;
+    box-shadow: var(--f2) 0px 2px 18px -4px;
+    z-index: 1;
+}
+
+._1 {
+    margin-top: 20px;
+}
+
+.top, .bottom{
+    background-color: #313131;
+    display: flex;
+    flex-direction: column;
+    height: 100lvh;
+    padding: 12px;
+    padding-left: 0;
+    padding-right: 36px;
+    gap: 20px;
+}
+.top {
+    align-items: center;
+}
+.bottom{
+    height: 28px;
+    margin-top: -20px;
+    position: sticky;
+}
+
+.difSignal {
+    display: flex;
+    width: 90px;
+    background-color: black;
+    justify-content: space-between;
+    justify-self: center;
+    margin-left: 36px;
+    margin-top: 12px;
+    padding: 6px;
+    border-radius: 8px;
+}
+.difSignal > div {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.r {
+    background-color: red;
+    opacity: 30%;
+}
+.y {
+    background-color: yellow;
+}
+.g {
+    background-color: lime;
+    opacity: 30%;
+}
+
+.timer {
+    color: white;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    margin-left: 36px;
+}
+
+
+.exit {
+    font-family: var(--jers);
+    font-size: 28px;
+    color: var(--f2);
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding: 8px;
+    border-radius: 0px 24px 24px 0px;
+    margin-top: -20px;
+    box-shadow: var(--f2) 0px 2px 18px -4px;
+    text-decoration: none;
+}
+
+
+
+
+
+.main {
+    background-color: black;
+    width: 100%;
+    position: relative;
+}
+
+.pre_btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+.pre_btn a{
+    color: var(--f2);
+}
+.next_btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--f2);
+}
+.next_btn a{
+    color: black;
+}
+.btn {
+    width: 10rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.btn a {
+    font-family: var(--jers);
+    font-size: 30px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn a:hover {
+    text-decoration: underline;
+}
