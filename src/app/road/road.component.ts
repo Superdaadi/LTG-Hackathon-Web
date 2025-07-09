@@ -12,21 +12,23 @@ export class RoadComponent {
   currentPosition = 0;
 
   pathPoints = [
-    { x: 5, y: 30 },
-    { x: 20, y: 40 },
-    { x: 35, y: 30 },
-    { x: 50, y: 40 },
-    { x: 65, y: 30 },
-    { x: 80, y: 40 },
+    { x: 5, y: 30, name: "Login", vis: true },
+    { x: 20, y: 40, name: "", vis: false },
+    { x: 35, y: 30, name: "", vis: false },
+    { x: 50, y: 40, name: "", vis: false },
+    { x: 65, y: 30, name: "", vis: false },
+    { x: 80, y: 40, name: "", vis: false },
   ];
 
   constructor(private router: Router){}
 
   moveTo(index: number) {
     console.log(index + "/" + this.currentPosition)
-    
+    var index1 = index + 1;
     if(index === this.currentPosition) {
-      this.router.navigate(['/level', index + 1])
+      //this.pathPoints[index1].vis = true
+      this.router.navigate(['/level', index1])
+      localStorage.setItem("level", index1.toString()) //ToDo
     }
 
     if(index === this.currentPosition + 1 || index === this.currentPosition - 1)

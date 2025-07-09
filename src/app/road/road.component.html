@@ -1,17 +1,18 @@
 <div class="map-container">
     <div class="blend"></div>
-    @for (point of pathPoints; track $index) {
-        <div
-            class="level"
-            [style.left.%]="point.x"
-            [style.top.%]="point.y"
-            [class.active]="currentPosition === $index"
-            (click)="moveTo($index)"
-        >
-            {{ $index + 1 }}
-        </div>
+    @for (level of pathPoints; track $index) {
+        @if(level.vis) {
+            <div
+                class="level"
+                [style.left.%]="level.x"
+                [style.top.%]="level.y"
+                [class.active]="currentPosition === $index"
+                (click)="moveTo($index)"
+            >
+                {{ $index + 1 }}
+            </div>
+        }
     }
-
 
     <div
         class="player"
