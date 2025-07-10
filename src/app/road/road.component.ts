@@ -22,6 +22,14 @@ export class RoadComponent {
 
   constructor(private router: Router){}
 
+  ngOnInit() {
+    var x = 0
+
+    /*for(let level of pathPoints;) {
+      
+    }*/
+  }
+
   moveTo(index: number) {
     console.log(index + "/" + this.currentPosition)
     var index1 = index + 1;
@@ -33,6 +41,5 @@ export class RoadComponent {
 
     if(index === this.currentPosition + 1 || index === this.currentPosition - 1)
       this.currentPosition = index;
-
   }
 }
