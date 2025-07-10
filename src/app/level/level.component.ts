@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-level',
@@ -11,8 +12,18 @@ export class LevelComponent {
   timeLeft: number = 0;
   displayTime: string = '';
   private intervalId: any;
+  protected id!: string
+
+  constructor (private route: ActivatedRoute) {
+  }
 
   ngOnInit(): void {
+    this.route.paramMap.subscribe(parms => {
+      this.id = parms.get('id') || ''
+    })
+
+    console.log("id " + this.id)
+
     this.updateDisplayTime();
 
     this.intervalId = setInterval(() => {
@@ -24,6 +35,7 @@ export class LevelComponent {
       }
     }, 1000);
   }
+
 
   ngOnDestroy(): void {
     if (this.intervalId) {
@@ -40,4 +52,11 @@ export class LevelComponent {
   pad(value: number): string {
     return value < 10 ? '0' + value : value.toString();
   }
+
+  addtToStorage() {
+    if(this.id != "") {
+      localStorage.setItem(this.id, "ja")
+    }
+  }
+
 }
