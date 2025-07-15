@@ -1,10 +1,17 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { LoginLevelComponent } from './login-level/login-level.component';
+import { Router } from '@angular/router';
+
+import { LocalService } from '../../service/local.service';
+
 
 @Component({
   selector: 'app-level',
   standalone: true,
-  imports: [],
+  imports: [
+    LoginLevelComponent
+  ],
   templateUrl: './level.component.html',
   styleUrl: './level.component.css'
 })
@@ -14,7 +21,7 @@ export class LevelComponent {
   private intervalId: any;
   protected id!: string
 
-  constructor (private route: ActivatedRoute) {
+  constructor (private router: Router, private route: ActivatedRoute, protected localService: LocalService) {
   }
 
   ngOnInit(): void {
@@ -36,7 +43,6 @@ export class LevelComponent {
     }, 1000);
   }
 
-
   ngOnDestroy(): void {
     if (this.intervalId) {
       clearInterval(this.intervalId);
@@ -53,9 +59,24 @@ export class LevelComponent {
     return value < 10 ? '0' + value : value.toString();
   }
 
-  addtToStorage() {
+  addToStorage() {
     if(this.id != "") {
       localStorage.setItem(this.id, "ja")
+    }
+  }
+
+  completeLevel() {
+    var currentLevel
+
+    this.route.paramMap.subscribe(params => {
+      const levelParam = params.get('id'); // 'id' muss zum Pfad passen!
+      currentLevel = levelParam ? +levelParam : 0;
+    });
+
+    if(currentLevel) {
+      currentLevel --;
+      this.localService.completeLevel(currentLevel, "Ergebnis");
+      this.router.navigate(['/road']);
     }
   }
 
