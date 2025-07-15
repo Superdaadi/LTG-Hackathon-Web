@@ -1,5 +1,18 @@
 import { Component } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Inject, PLATFORM_ID } from '@angular/core';
 import { Router } from '@angular/router';
+
+import { LocalService } from '../../service/local.service';
+
+export interface PathPoint {
+  x: number;
+  y: number;
+  name: string;
+  vis: boolean;
+  result: string;
+}
+
 
 @Component({
   selector: 'app-road',
@@ -10,24 +23,25 @@ import { Router } from '@angular/router';
 })
 export class RoadComponent {
   currentPosition = 0;
+  pathPoints: PathPoint[] = [];
 
-  pathPoints = [
-    { x: 5, y: 30, name: "Login", vis: true },
-    { x: 20, y: 40, name: "", vis: false },
-    { x: 35, y: 30, name: "", vis: false },
-    { x: 50, y: 40, name: "", vis: false },
-    { x: 65, y: 30, name: "", vis: false },
-    { x: 80, y: 40, name: "", vis: false },
-  ];
-
-  constructor(private router: Router){}
+  constructor(private router: Router, protected localService: LocalService){
+    this.pathPoints = this.localService.syncPathPointsReturn()
+  }
 
   ngOnInit() {
-    var x = 0
+    this.localService.syncPathPoints();
+    this.currentPosition = this.localService.getLastVisibleIndex();
+  }
 
-    /*for(let level of pathPoints;) {
-      
-    }*/
+  start() {
+    const pos = this.currentPosition + 1
+    this.router.navigate(['/level', pos]);
+  }
+
+  resetPathPointsInLocal() {
+    this.localService.resetToDefault();
+    window.location.reload();
   }
 
   moveTo(index: number) {
