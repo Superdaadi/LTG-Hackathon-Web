@@ -55,5 +55,17 @@ export class RoadComponent {
 
     if(index === this.currentPosition + 1 || index === this.currentPosition - 1)
       this.currentPosition = index;
+
+    if(index === this.currentPosition + 2 || index === this.currentPosition - 2)
+      this.currentPosition = index;
+
+    if(index === this.currentPosition + 3 || index === this.currentPosition - 3)
+      this.currentPosition = index;
+
+    if(index === this.currentPosition + 4 || index === this.currentPosition - 4)
+      this.currentPosition = index;
+
+    if(index === this.currentPosition + 5 || index === this.currentPosition - 5)
+      this.currentPosition = index;
   }
 }
