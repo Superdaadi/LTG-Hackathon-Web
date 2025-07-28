@@ -68,18 +68,5 @@
   padding-right: 10px;
   display: flex;
   align-items: center;
-}
-
-.reset-button {
-  font-family: var(--jers);
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  background-color: var(--f2);
-  font-size: 42px;
-  border-radius: 12px;
-  padding-left: 10px;
-  padding-right: 10px;
-  display: flex;
-  align-items: center;
+  cursor: pointer;
 }
