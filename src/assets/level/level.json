@@ -1,0 +1,104 @@
+{
+  "levels": [
+    {
+      "heading": "Level 1: Die geheimnisse der Kryptographie",
+      "difficulty": 1,
+      "level": [
+        {
+          "type": "img",
+          "image": "assets/bg.png"
+        },
+        {
+          "type": "text",
+          "text": "Das ist das erste Level. Löse das Rätsel um weiterzukommen"
+        },
+        {
+          "type": "input",
+          "input": "Deine Antwert hier..."
+        },
+        {
+          "type": "link",
+          "link": "https://youtube.com",
+          "linkText": "In diesem Youtubevideo findest du Hilfe ->"
+        }
+      ]
+    },
+    {
+      "heading": "Level 2: Knacke den Login",
+      "difficulty": 3,
+      "level": [
+        {
+          "type": "text",
+          "text": "Die sog. Dev Tools werden verwendet um mehr einsicht über das derzeitig offene Browserfenster zu gelangen. BlaBlaBla. Maybe doch mit SQL injection????"
+        },
+        {
+          "type": "img",
+          "image": "assets/devtools.png"
+        },
+        {
+          "type": "text",
+          "text": "Oft entdeckt man sogar Fehler oder kleine Bugs. Könnte der Entwickler vielleicht einen ungewollten Kommentar hinterlassen haben?"
+        },
+        {
+          "type": "link",
+          "link": "https://example.com",
+          "linkText": "Hier gehts zum Login, den du knacken musst ->"
+        },
+        {
+          "type": "text",
+          "text": "Gib Willi's geheimes Passwort ein:"
+        },
+        {
+          "type": "input",
+          "input": "Passwort..."
+        }
+      ]
+    },
+    {
+      "heading": "Browsermanipulation",
+      "difficulty": 3,
+      "level": [
+        {
+          "type": "img",
+          "image": "assets/images/level2-background.png"
+        },
+        {
+          "type": "text",
+          "text": "Great! You made it to Level 2."
+        },
+        {
+          "type": "input",
+          "input": "Type the secret code..."
+        },
+        {
+          "type": "link",
+          "link": "https://example.com",
+          "linkText": "Visit Site"
+        }
+      ]
+    },
+    {
+      "heading": "Browsermanipulation",
+      "difficulty": 3,
+      "level": [
+        {
+          "type": "img",
+          "image": "assets/images/level2-background.png"
+        },
+        {
+          "type": "text",
+          "text": "Great! You made it to Level 2."
+        },
+        {
+          "type": "input",
+          "input": "Type the secret code..."
+        },
+        {
+          "type": "link",
+          "link": "https://example.com",
+          "linkText": "Visit Site"
+        }
+      ]
+    }
+  ]
+}

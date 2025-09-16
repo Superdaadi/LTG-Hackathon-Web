@@ -3,9 +3,28 @@
         <div class="top">
             
             <div class="difSignal">
-                <div class="r"></div>
-                <div class="y"></div>
-                <div class="g"></div>
+                @if (level.difficulty === 1) {
+                    <div class="r"></div>
+                    <div class="y"></div>
+                    <div class="g sel"></div>
+                }
+                @else if (level.difficulty === 2) {
+                    <div class="r"></div>
+                    <div class="y sel"></div>
+                    <div class="g"></div>
+                }
+                @else if (level.difficulty === 3) {
+                    <div class="r sel"></div>
+                    <div class="y"></div>
+                    <div class="g"></div>
+                }
+                @else {
+                    <div class="r"></div>
+                    <div class="y"></div>
+                    <div class="g"></div>
+                }
+                
+                
             </div>
 
             <div class="timer">
@@ -24,7 +43,7 @@
 
     <div class="main">
 
-        <app-login-level></app-login-level>
+        <app-level-content></app-level-content>
 
         <div (click)="completeLevel()" class="next_btn btn">
             <a href="">weiter ></a>

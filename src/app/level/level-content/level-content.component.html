@@ -1,0 +1,37 @@
+<div class="full">
+    <div class="scroll-area">
+        <div class="level-container">
+            <h2 class="level-title">{{level.heading}}</h2>
+        
+            @for (comp of level.level; track $index) {
+                <div class="component">
+                    @if (comp.type === 'img') {
+                        <img [src]="comp.image" alt="Level image" class="level-image subcomp" />
+                    }
+
+                    @if (comp.type === 'text') {
+                        <p class="level-text subcomp">{{ comp.text }}</p>
+                    }
+
+                    @if (comp.type === 'input') {
+                        <input
+                            type="text"
+                            [placeholder]="comp.input"
+                            [name]="this.levelNumber"
+                            class="level-input subcomp"
+                        />
+                    }
+
+                    @if (comp.type === 'link') {
+                        <button class="level-button subcomp" (click)="openLink(comp.link)">{{ comp.linkText }}</button>
+                    }
+                    
+                    
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+

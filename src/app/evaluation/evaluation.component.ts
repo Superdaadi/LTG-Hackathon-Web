@@ -9,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class EvaluationComponent {
 
+
+  clearSession(): void {
+    localStorage.clear();
+    console.log('Session storage cleared');
+  }
+
 }

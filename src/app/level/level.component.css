@@ -58,10 +58,14 @@
 }
 .y {
     background-color: yellow;
+    opacity: 30%;
 }
 .g {
     background-color: lime;
     opacity: 30%;
+}
+.sel {
+    opacity: 100%;
 }
 
 .timer {
