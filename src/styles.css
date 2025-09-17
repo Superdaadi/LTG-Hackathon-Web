@@ -20,3 +20,34 @@ html, body {
     height: 100%;
     overflow: hidden;
 }
+
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px; 
+    border-radius: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f100;
+    border-radius: 10px;
+    margin: 12px;
+    margin-right: 20px;
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #000000;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #2e2e2e;
+}
+
