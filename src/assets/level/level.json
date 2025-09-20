@@ -1,7 +1,7 @@
 {
   "levels": [
     {
-      "heading": "Level 1: Die geheimnisse der Kryptographie",
+      "heading": "Level 1: Die Geheimnisse der Kryptographie",
       "difficulty": 1,
       "level": [
         {
@@ -11,6 +11,10 @@
         {
           "type": "text",
           "text": "Das ist das erste Level. Löse das Rätsel um weiterzukommen"
+        },
+        {
+          "type": "text",
+          "text": "Herr Pütz ist der Beste"
         },
         {
           "type": "input",

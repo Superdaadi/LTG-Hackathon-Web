@@ -12,7 +12,7 @@ export interface PathPoint {
   result: string;
 }
 const defaultPathPoints: PathPoint[] = [
-  { x: 5, y: 30, name: "Login", vis: true, result: "" },
+  { x: 27, y: 66, name: "Login", vis: true, result: "" },
   { x: 20, y: 40, name: "Level2", vis: false, result: "" },
   { x: 35, y: 30, name: "Level3", vis: false, result: "" },
   { x: 50, y: 40, name: "Level4", vis: false, result: "" },
@@ -35,7 +35,7 @@ export class LocalService {
   constructor(@Inject(PLATFORM_ID) private platformId: Object, private router: Router){}
 
   ngOnInit() {
-    this.saveToLocalStorage()
+    //this.saveToLocalStorage()
   }
 
   public syncPathPoints(): void {
@@ -94,7 +94,7 @@ export class LocalService {
 
   public saveToLocalStorage(): void {
     if (isPlatformBrowser(this.platformId)) {
-      localStorage.setItem(this.STORAGE_KEY, JSON.stringify(this.pathPoints));
+      //localStorage.setItem(this.STORAGE_KEY, JSON.stringify(this.pathPoints));
     }
   }
 
