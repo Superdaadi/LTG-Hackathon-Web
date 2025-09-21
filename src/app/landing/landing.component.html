@@ -1,1 +1,27 @@
-<p>landing works!</p>
+<div class="map-container">
+    <div class="blend">
+
+        <div class="comp">
+            <h1 class="heading">
+                Hack Me Not! - "Cybersicherheit verstehen & anwenden"
+            </h1>
+        </div>
+        <div class="comp comp2">
+            <p class="subtext">
+                Wilkommen zu dem Projekt des Infokurses 24/26 ptz. 
+                Unsere Mission ist es euch einen interaktiven Einblick 
+                in die Cybersicherheit zu geben. Hierzu haben wir 
+                neben der vorangehenden Präsentation eine spielerische 
+                Web-App gebaut um euch vor den Gefahren des Internets zu warnen.
+            </p>
+            @if(resetShown) {
+                <button (click)="start()" class="startbtn">Weiter! -></button>
+                <button (click)="reset()" class="resetbtn">Reset</button>
+            }
+            @else {
+                <button (click)="start()" class="startbtn">Los Gehts! -></button>
+            }
+        </div>
+
+    </div>
+</div>

@@ -86,7 +86,7 @@ export class LevelComponent {
     if(currentLevel) {
       currentLevel --;
       this.localService.completeLevel(currentLevel, "Ergebnis");
-      this.router.navigate(['/road']);
+      this.router.navigate(['road']);
     }
   }
 

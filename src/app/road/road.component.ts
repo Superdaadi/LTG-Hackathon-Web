@@ -48,7 +48,7 @@ export class RoadComponent {
     console.log(index + "/" + this.currentPosition)
     var index1 = index + 1;
     if(index === this.currentPosition) {
-      //this.pathPoints[index1].vis = true
+      this.pathPoints[index1].vis = true
       this.router.navigate(['/level', index1])
       localStorage.setItem("level", index1.toString()) //ToDo
     }

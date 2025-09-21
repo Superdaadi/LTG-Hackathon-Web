@@ -13,11 +13,12 @@ export interface PathPoint {
 }
 const defaultPathPoints: PathPoint[] = [
   { x: 27, y: 66, name: "Login", vis: true, result: "" },
-  { x: 20, y: 40, name: "Level2", vis: false, result: "" },
-  { x: 35, y: 30, name: "Level3", vis: false, result: "" },
-  { x: 50, y: 40, name: "Level4", vis: false, result: "" },
-  { x: 65, y: 30, name: "Level5", vis: false, result: "" },
-  { x: 80, y: 40, name: "Level6", vis: false, result: "" },
+  { x: 20, y: 41, name: "Level2", vis: false, result: "" },
+  { x: 34, y: 16, name: "Level3", vis: false, result: "" },
+  { x: 72.5, y: 20.5, name: "Level4", vis: false, result: "" },
+  { x: 78, y: 50, name: "Level5", vis: false, result: "" },
+  { x: 58, y: 64.5, name: "Level6", vis: false, result: "" },
+  { x: 49, y: 39, name: "Ziel", vis: false, result: "" },
 ];
 
 
@@ -35,7 +36,7 @@ export class LocalService {
   constructor(@Inject(PLATFORM_ID) private platformId: Object, private router: Router){}
 
   ngOnInit() {
-    //this.saveToLocalStorage()
+    this.saveToLocalStorage()
   }
 
   public syncPathPoints(): void {
@@ -94,7 +95,7 @@ export class LocalService {
 
   public saveToLocalStorage(): void {
     if (isPlatformBrowser(this.platformId)) {
-      //localStorage.setItem(this.STORAGE_KEY, JSON.stringify(this.pathPoints));
+      localStorage.setItem(this.STORAGE_KEY, JSON.stringify(this.pathPoints));
     }
   }
 
