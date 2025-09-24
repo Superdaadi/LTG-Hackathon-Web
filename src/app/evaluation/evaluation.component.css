@@ -17,6 +17,19 @@
     margin-top: 20px;
 }
 
+.level-info {
+    background-color: black;
+    color: var(--f2);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    width: calc(100vw - 16rem);
+    height: calc(100svh - 58px);
+    text-align: center;
+}
 .top, .bottom{
     background-color: #313131;
     display: flex;
