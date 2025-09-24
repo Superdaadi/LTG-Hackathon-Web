@@ -10,20 +10,32 @@
         },
         {
           "type": "text",
-          "text": "Das ist das erste Level. Löse das Rätsel um weiterzukommen"
+          "text": "Nochmal ganz offiziell Herzlich Wilkommen! Ich (grugru) der Geist werde dich durch die atemberaubenden Welten der Cybersicherheit führen und begleiten. Heirbei ist aber höchste Aufmerksamkeit erfordert, denn auf dieser Webseite befinden sich viele Gefahren."
         },
         {
           "type": "text",
-          "text": "Herr Pütz ist der Beste"
+          "text": "Nun kommen wir zur aller ersten, noch einfachen Frage. Hierfür kannst und darfst du Google nutzen. Wir haben euch extra persönliche Anmeldedaten erstellt, da ihr diese nochmal benötigen werdet."
+        },
+        {
+          "type": "text",
+          "text": "E-Mail: informatik-am-ltg-26@gmail.com"
+        },
+        {
+          "type": "text",
+          "text": "Passwort: Frechdachs95%"
+        },
+        {
+          "type": "link",
+          "link": "https://google-com-fawn.vercel.app",
+          "linkText": "Hier gehts direkt zu Google ->"
+        },
+        {
+          "type": "text",
+          "text": "In welchem Jahr fand der allererste digitale Angriff statt. Hinweis: 🇫🇷"
         },
         {
           "type": "input",
           "input": "Deine Antwert hier..."
-        },
-        {
-          "type": "link",
-          "link": "https://youtube.com",
-          "linkText": "In diesem Youtubevideo findest du Hilfe ->"
         }
       ]
     },
