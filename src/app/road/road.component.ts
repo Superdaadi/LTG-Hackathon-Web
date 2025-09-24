@@ -13,6 +13,12 @@ export interface PathPoint {
   result: string;
 }
 
+const pathPoints = [
+  { x: 10, y: 20, vis: true, name: 'Start' },
+  { x: 30, y: 40, vis: true, name: 'Checkpoint' },
+  { x: 50, y: 60, vis: true, name: 'Ziel' }
+];
+
 
 @Component({
   selector: 'app-road',

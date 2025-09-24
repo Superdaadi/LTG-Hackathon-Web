@@ -13,11 +13,11 @@ export interface PathPoint {
 }
 const defaultPathPoints: PathPoint[] = [
   { x: 5, y: 30, name: "Login", vis: true, result: "" },
-  { x: 20, y: 40, name: "Level2", vis: false, result: "" },
-  { x: 35, y: 30, name: "Level3", vis: false, result: "" },
-  { x: 50, y: 40, name: "Level4", vis: false, result: "" },
-  { x: 65, y: 30, name: "Level5", vis: false, result: "" },
-  { x: 80, y: 40, name: "Level6", vis: false, result: "" },
+  { x: 20, y: 40, name: "Datei erhalten", vis: false, result: "" },
+  { x: 35, y: 30, name: "Bildanalyse", vis: false, result: "" },
+  { x: 50, y: 40, name: "Log-Datei", vis: false, result: "" },
+  { x: 65, y: 30, name: "Eingabeformular", vis: false, result: "" },
+  { x: 80, y: 40, name: "Die Challenge", vis: false, result: "" },
 ];
 
 
