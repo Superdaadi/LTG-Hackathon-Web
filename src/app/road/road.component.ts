@@ -41,8 +41,13 @@ export class RoadComponent {
   }
 
   start() {
-    const pos = this.currentPosition + 1
-    this.router.navigate(['/level', pos]);
+    if(this.currentPosition == 6) {
+      this.router.navigate(['/ev']);
+    }
+    else {
+      const pos = this.currentPosition + 1
+      this.router.navigate(['/level', pos]);
+    }
   }
 
   resetPathPointsInLocal() {
@@ -54,7 +59,7 @@ export class RoadComponent {
     console.log(index + "/" + this.currentPosition)
     var index1 = index + 1;
     if(index === this.currentPosition) {
-      //this.pathPoints[index1].vis = true
+      this.pathPoints[index1].vis = true
       this.router.navigate(['/level', index1])
       localStorage.setItem("level", index1.toString()) //ToDo
     }

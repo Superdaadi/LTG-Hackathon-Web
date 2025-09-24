@@ -4,23 +4,25 @@
   height:  100dvh; /* fixed height */
   margin: auto;
   overflow: hidden;
-  background-image: url('/assets/bg.png');
-  background-size: cover; /* or 'auto' */
+  background-image: url('/assets/image1.png');
+  background-size: contain; /* or 'auto' */
+  background-size: 100% 90%;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: #ecaef5;
 }
 
 .blend {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.548);
+    /*background-color: rgba(0, 0, 0, 0.548);*/
 }
 
 .level {
   position: absolute;
   width: 50px;
   height: 50px;
-  background-color: #ffcc00;
+  /*background-color: #ffcc00;*/
   border-radius: 50%;
   line-height: 30px;
   font-weight: bold;
@@ -33,7 +35,7 @@
 }
 
 .level.active {
-  background-color: #4caf50;
+  /*background-color: #4caf50;*/
   transform: scale(1.2);
 }
 
@@ -53,6 +55,25 @@
   position: absolute;
   font-size: 66px;
   transition: left 0.5s ease, top 0.5s ease;
+}
+
+.geist {
+  width: 5.1rem;
+  transition: ease 0.2s;
+  animation: geist 1.8s infinite;
+}
+
+@keyframes geist {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+
 }
 
 
