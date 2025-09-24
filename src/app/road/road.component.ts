@@ -35,8 +35,13 @@ export class RoadComponent {
   }
 
   start() {
-    const pos = this.currentPosition + 1
-    this.router.navigate(['/level', pos]);
+    if(this.currentPosition == 6) {
+      this.router.navigate(['/ev']);
+    }
+    else {
+      const pos = this.currentPosition + 1
+      this.router.navigate(['/level', pos]);
+    }
   }
 
   resetPathPointsInLocal() {
