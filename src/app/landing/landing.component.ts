@@ -13,13 +13,12 @@ export class LandingComponent {
   protected resetShown: boolean = true
 
   constructor(private router: Router) {
-    this.test = localStorage.getItem('pathPoints')
+    this.test = localStorage.getItem('results')
 
     console.log(this.test)
 
     if(this.test == null) {
       this.resetShown = false
-      
     }
   }
 
@@ -28,7 +27,7 @@ export class LandingComponent {
   }
 
   reset() {
-    localStorage.clear()
+    localStorage.clear()  
     this.resetShown = false
   }
 

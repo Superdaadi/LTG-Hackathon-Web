@@ -2,7 +2,7 @@
   "levels": [
     {
       "heading": "Level 1: Die Geheimnisse im Finsterwald",
-      "difficulty": 1,
+      "difficulty": 2,
       "level": [
         {
           "type": "img",
@@ -10,11 +10,15 @@
         },
         {
           "type": "text",
-          "text": "Nochmal ganz offiziell Herzlich Wilkommen! Ich bin Hubi, das Gespenst. Ich wandle durch mein Haus und werde dich durch die atemberaubenden Welten der Cybersicherheit führen und begleiten. Heirbei ist aber höchste Aufmerksamkeit erfordert, denn auf dieser Webseite befinden sich viele Gefahren."
+          "text": "Nochmal ganz offiziell Herzlich Wilkommen! Ich bin Hubi, das Gespenst. Ich wandle durch mein Haus und werde dich durch die atemberaubenden Welten der Cybersicherheit führen und begleiten. Hierbei ist aber höchste Aufmerksamkeit erfordert, denn auf dieser Webseite befinden sich viele Gefahren."
         },
         {
           "type": "text",
-          "text": "Nun kommen wir zur aller ersten, noch einfachen Frage. Hierfür kannst und darfst du Google nutzen. Wir haben euch extra persönliche Anmeldedaten erstellt, da ihr diese nochmal benötigen werdet."
+          "text": "Nun kommen wir zur aller ersten, noch einfachen Frage. Hierfür kannst und darfst du Google nutzen. Ich habe dir extra persönliche Anmeldedaten erstellt, da du diese gelegentlich nochmal benötigen wirst."
+        },
+        {
+          "type": "vgap",
+          "number": 0.7
         },
         {
           "type": "text",
@@ -25,13 +29,17 @@
           "text": "Passwort: Frechdachs95%"
         },
         {
-          "type": "text",
-          "text": "'"
+          "type": "vgap",
+          "number": 0.7
         },
         {
           "type": "link",
           "link": "https://google-com-fawn.vercel.app",
           "linkText": "Hier gehts direkt zu Google ->"
+        },
+        {
+          "type": "vgap",
+          "number": 0.7
         },
         {
           "type": "text",
@@ -42,18 +50,25 @@
           "text": "Hinweis: 🇫🇷"
         },
         {
+          "type": "vgap",
+          "number": 0.7
+        },
+        {
           "type": "input",
           "input": "Deine Antwert hier..."
         }
       ]
     },
+
+
+
     {
-      "heading": "Level 2: Knacke den Login",
+      "heading": "Level 2: Die What the flip? Die \"DevTools\"? Was das",
       "difficulty": 3,
       "level": [
         {
           "type": "text",
-          "text": "Die sog. Dev Tools werden verwendet um mehr einsicht über das derzeitig offene Browserfenster zu gelangen. BlaBlaBla. Maybe doch mit SQL injection????"
+          "text": "DevTools: Gute gemacht! :) Lasst uns als nächstes einen Blick hinter die Kulissen der Website werfen. Öffnet dazu den Quellcode der Website. Dort habe ich euch etwas versteckt."
         },
         {
           "type": "img",
@@ -65,21 +80,24 @@
         },
         {
           "type": "link",
-          "link": "https://example.com",
-          "linkText": "Hier gehts zum Login, den du knacken musst ->"
+          "link": "https://digitalfahrschule.de/element-untersuchen-im-chrome/",
+          "linkText": "Brauchst du Hilfe dabei?"
         },
         {
           "type": "text",
-          "text": "Gib Willi's geheimes Passwort ein:"
+          "text": "Gib des Programmierers liebstes Tier ein:"
         },
         {
           "type": "input",
-          "input": "Passwort..."
+          "input": "Hmmm..."
         }
       ]
     },
+
+
+
     {
-      "heading": "Browsermanipulation",
+      "heading": "Eine ominöse Datei...",
       "difficulty": 3,
       "level": [
         {
@@ -87,47 +105,98 @@
           "image": "assets/Hands.jpg"
         },
         {
-          "type": "file",
-          "link": "assets/Bestätigung.bat",
-          "linkText": "Bestätigung"
+          "type": "text",
+          "text": "Das Versteckspiel geht weiter. In dieser Datei findest du die Lösung, um weiterzukommen. Doch passt auf, sonst landet euer PC bald im selben Grab, wie ich :P, Wie könnte der ersteller dieser Datei nur heißen?"
         },
         {
-          "type": "text",
-          "text": "Great! You made it to Level 2."
+          "type": "file",
+          "link": "assets/Bestätigung.bat",
+          "linkText": "Datei herunterladen"
         },
         {
           "type": "input",
-          "input": "Type the secret code..."
-        },
-        {
-          "type": "link",
-          "link": "https://example.com",
-          "linkText": "Visit Site"
+          "input": "Hmm ein Name vielleicht..."
         }
       ]
     },
+
+
+
     {
-      "heading": "Browsermanipulation",
-      "difficulty": 3,
+      "heading": "Was für eine Bild Analyse",
+      "difficulty": 2,
       "level": [
         {
           "type": "img",
-          "image": "assets/images/level2-background.png"
+          "image": "assets/datenImBild.jpg"
         },
         {
           "type": "text",
-          "text": "Great! You made it to Level 2."
+          "text": "Ein Geist spukt mehr als tausend Leute und ein Bild sagt mehr als tausend Worte..."
         },
         {
           "type": "input",
-          "input": "Type the secret code..."
+          "input": "Der versteckte Code..."
+        }
+      ]
+    },
+
+
+
+    {
+      "heading": "Log Datei - Du weißt wie man sie ließt?",
+      "difficulty": 1,
+      "level": [
+        {
+          "type": "img",
+          "image": "assets/log.png"
         },
         {
-          "type": "link",
-          "link": "https://example.com",
-          "linkText": "Visit Site"
+          "type": "text",
+          "text": "Ich liebe es Menschen hinterher zu geistern und ihre Geheimnisse zu entdecken. Hier ein Versuchskaninchen für euch, um dasselbe zu tun."
+        },
+        {
+          "type": "file",
+          "link": "assets/ssl_mitm_log.log",
+          "linkText": "LogDatei herunterladen"
+        },
+        {
+          "type": "text",
+          "text": "Na. Findest du den Fehler? Was genau passt nicht."
+        },
+        {
+          "type": "input",
+          "input": "...not match known..."
+        }
+      ]
+    },
+
+
+
+    {
+      "heading": "Spaß zum Schluss!",
+      "difficulty": 1,
+      "level": [
+        {
+          "type": "img",
+          "image": "assets/kasperle.jpg"
+        },
+        {
+          "type": "img",
+          "image": "assets/sky.jpg"
+        },
+        {
+          "type": "text",
+          "text": "Wie heißt der Virenschutz, der hier gemeint ist? Na, wer kennt sich aus"
+        },
+        {
+          "type": "input",
+          "input": "K..."
         }
       ]
     }
+
+
+
   ]
 }

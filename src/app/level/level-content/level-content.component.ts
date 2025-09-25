@@ -1,15 +1,19 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import {FormsModule} from '@angular/forms';
 
 import levelData from '../../../assets/level/level.json';
 import { Level } from './level-content.model';
+import { ResService } from '../../../service/res.service';
 
 
 
 @Component({
   selector: 'app-level-content',
   standalone: true,
-  imports: [],
+  imports: [
+    FormsModule
+  ],
   templateUrl: './level-content.component.html',
   styleUrl: './level-content.component.css'
 })
@@ -23,8 +27,10 @@ export class LevelContentComponent {
     difficulty: 0,
     level: []
   };
+  protected input = ""
 
-  constructor(private route: ActivatedRoute) {}
+
+  constructor(private route: ActivatedRoute, private router: Router, private resService: ResService) {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -32,7 +38,9 @@ export class LevelContentComponent {
     });
     console.log('Level number:', this.levelNumber);
 
-    this.level = levelData.levels[this.levelNumber - 1]
+    this.level = levelData.levels[this.levelNumber - 1];
+
+    this.input = this.resService.getSavedRes(this.levelNumber);
 
 
     console.log(this.levels)
@@ -52,8 +60,30 @@ export class LevelContentComponent {
     const link = document.createElement('a');
     link.href = filePath;
     link.download = filePath.split('/').pop() || 'download.bat';
-    link.click();
+    link.click(); 
   }
+
+  inputSubmit(levelNumber: number) {
+    if (!this.input) {
+      alert('Bitte einen Wert eingeben');
+      return;
+    }
+
+    console.log(this.input)
+
+    try {
+      this.resService.addResToLocalStorage(levelNumber, this.input);
+    }
+    catch(e) {
+      console.log("Fehler beim Spreichern: " + e)
+      return
+    }
+
+    this.router.navigate(['road'])
+  }
+
+  
+
 
 
 

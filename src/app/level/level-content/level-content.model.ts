@@ -10,5 +10,6 @@ export interface LevelCmponent {
     text?: string;
     input?: string;
     link?: string;
-    linkText?: string
+    linkText?: string;
+    number?: number
 }
