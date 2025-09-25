@@ -1,16 +1,16 @@
 {
   "levels": [
     {
-      "heading": "Level 1: Die Geheimnisse der Kryptographie",
+      "heading": "Level 1: Die Geheimnisse im Finsterwald",
       "difficulty": 1,
       "level": [
         {
           "type": "img",
-          "image": "assets/bg.png"
+          "image": "assets/geisterstadt.webp"
         },
         {
           "type": "text",
-          "text": "Nochmal ganz offiziell Herzlich Wilkommen! Ich (grugru) der Geist werde dich durch die atemberaubenden Welten der Cybersicherheit führen und begleiten. Heirbei ist aber höchste Aufmerksamkeit erfordert, denn auf dieser Webseite befinden sich viele Gefahren."
+          "text": "Nochmal ganz offiziell Herzlich Wilkommen! Ich bin Hubi, das Gespenst. Ich wandle durch mein Haus und werde dich durch die atemberaubenden Welten der Cybersicherheit führen und begleiten. Heirbei ist aber höchste Aufmerksamkeit erfordert, denn auf dieser Webseite befinden sich viele Gefahren."
         },
         {
           "type": "text",
@@ -25,13 +25,21 @@
           "text": "Passwort: Frechdachs95%"
         },
         {
+          "type": "text",
+          "text": "'"
+        },
+        {
           "type": "link",
           "link": "https://google-com-fawn.vercel.app",
           "linkText": "Hier gehts direkt zu Google ->"
         },
         {
           "type": "text",
-          "text": "In welchem Jahr fand der allererste digitale Angriff statt. Hinweis: 🇫🇷"
+          "text": "In welchem Jahr fand der allererste digitale Angriff statt?"
+        },
+        {
+          "type": "text",
+          "text": "Hinweis: 🇫🇷"
         },
         {
           "type": "input",
@@ -80,7 +88,8 @@
         },
         {
           "type": "file",
-          "image": "assets/Bild_untersuchen.Batch"
+          "link": "assets/Bestätigung.bat",
+          "linkText": "Bestätigung"
         },
         {
           "type": "text",

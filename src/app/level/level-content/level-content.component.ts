@@ -43,4 +43,18 @@ export class LevelContentComponent {
       window.open(url, '_blank');
   }
 
+  downloadFile(filePath?: string) {
+    if (!filePath) {
+      console.warn('No file path provided');
+      return;
+    }
+
+    const link = document.createElement('a');
+    link.href = filePath;
+    link.download = filePath.split('/').pop() || 'download.bat';
+    link.click();
+  }
+
+
+
 }

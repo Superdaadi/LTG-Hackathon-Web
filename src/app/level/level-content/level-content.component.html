@@ -25,10 +25,9 @@
                     @if (comp.type === 'link') {
                         <button class="level-button subcomp" (click)="openLink(comp.link)">{{ comp.linkText }}</button>
                     }
+
                     @if (comp.type === 'file') {
-                        <a class="level-button subcomp" href="{{ comp.image }}" download>
-                            Bild untersuchen
-                        </a>
+                        <button class="level-button subcomp" (click)="downloadFile(comp.link)">{{ comp.linkText }}</button>
                     }
                     
                     
