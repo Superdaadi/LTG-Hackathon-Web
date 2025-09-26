@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 
 import { LoginLevelComponent } from './login-level/login-level.component';
 import { LevelContentComponent } from './level-content/level-content.component';
-import { LocalService } from '../../service/local.service';
 import levelData from '../../assets/level/level.json';
 import { Level } from './level-content/level-content.model';
 
@@ -29,7 +28,7 @@ export class LevelComponent {
     level: []
   };
 
-  constructor (private router: Router, private route: ActivatedRoute, protected localService: LocalService) {
+  constructor (private router: Router, private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
@@ -85,7 +84,7 @@ export class LevelComponent {
 
     if(currentLevel) {
       currentLevel --;
-      this.localService.completeLevel(currentLevel, "Ergebnis");
+      //this.localService.completeLevel(currentLevel, "Ergebnis");
       this.router.navigate(['road']);
     }
   }

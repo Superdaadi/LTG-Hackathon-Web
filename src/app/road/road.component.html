@@ -1,37 +1,36 @@
 <div class="map-container">
     <div class="blend"></div>
-    @for (level of pathPoints; track $index) {
-        @if(level.vis) {
-            <div
-                class="level"
-                [style.left.%]="level.x"
-                [style.top.%]="level.y"
-                [class.active]="currentPosition === $index"
-                (click)="moveTo($index)"
-            >
-                {{ $index + 1 }}
-                <div class="name">
-                    {{ level.name }}
+
+        @for (level of defaultPathPoints.slice(0, lastLevel + 1); track $index) {
+                <div
+                    class="level"
+                    [style.left.%]="level.x"
+                    [style.top.%]="level.y"
+                    [class.active]="currentPosition === $index"
+                    (click)="moveTo($index)"
+                >
+                    {{ $index + 1 }}
+                    <div class="name">
+                        {{ level.name }}
+                    </div>
                 </div>
-            </div>
         }
-    }
 
     <div
         class="player"
-        [style.left.%]="pathPoints[currentPosition].x - 1"
-        [style.top.%]="pathPoints[currentPosition].y - 9"
+        [style.left.%]="defaultPathPoints[currentPosition].x - 1"
+        [style.top.%]="defaultPathPoints[currentPosition].y - 9"
     >
         <img class="geist" src="assets/image0.png" alt="">
     </div>
 </div>
 
 <div (click)="start()" class="start-button">
-    &gt;START&lt;
+    START &gt;
 </div>
 
 
-<div (click)="resetPathPointsInLocal()" class="reset-button">
-    &gt;RESET&lt;
+<div (click)="home()" class="home-button">
+    &lt; HOME
 </div>
 

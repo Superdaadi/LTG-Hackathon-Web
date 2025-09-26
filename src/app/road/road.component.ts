@@ -1,23 +1,15 @@
 import { Component } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
-import { Inject, PLATFORM_ID } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { LocalService } from '../../service/local.service';
+import { ResService } from '../../service/res.service';
 
-export interface PathPoint {
+
+export interface PathPointKords {
   x: number;
   y: number;
   name: string;
   vis: boolean;
-  result: string;
 }
-
-const pathPoints = [
-  { x: 10, y: 20, vis: true, name: 'Start' },
-  { x: 30, y: 40, vis: true, name: 'Checkpoint' },
-  { x: 50, y: 60, vis: true, name: 'Ziel' }
-];
 
 
 @Component({
@@ -28,16 +20,26 @@ const pathPoints = [
   styleUrl: './road.component.css'
 })
 export class RoadComponent {
-  currentPosition = 0;
-  pathPoints: PathPoint[] = [];
 
-  constructor(private router: Router, protected localService: LocalService){
-    this.pathPoints = this.localService.syncPathPointsReturn()
+  protected currentPosition = 0;
+  protected lastLevel = 0;
+
+  protected defaultPathPoints: PathPointKords[] = [
+    { x: 27, y: 66, name: "Login", vis: true },
+    { x: 20, y: 41, name: "Level2", vis: false },
+    { x: 34, y: 16, name: "Level3", vis: false },
+    { x: 72.5, y: 20.5, name: "Level4", vis: false },
+    { x: 78, y: 50, name: "Level5", vis: false },
+    { x: 58, y: 64.5, name: "Level6", vis: false },
+    { x: 49, y: 39, name: "Ziel", vis: false },
+  ];
+
+  constructor(private router: Router, private resService: ResService){
   }
 
   ngOnInit() {
-    this.localService.syncPathPoints();
-    this.currentPosition = this.localService.getLastVisibleIndex();
+    this.lastLevel = this.resService.getHighestSavedLevel()
+    this.currentPosition = this.lastLevel
   }
 
   start() {
@@ -50,18 +52,15 @@ export class RoadComponent {
     }
   }
 
-  resetPathPointsInLocal() {
-    this.localService.resetToDefault();
-    window.location.reload();
+  home() {
+    this.router.navigate(['/landing']);
   }
 
   moveTo(index: number) {
     console.log(index + "/" + this.currentPosition)
     var index1 = index + 1;
     if(index === this.currentPosition) {
-      this.pathPoints[index1].vis = true
       this.router.navigate(['/level', index1])
-      localStorage.setItem("level", index1.toString()) //ToDo
     }
 
     this.currentPosition = index;

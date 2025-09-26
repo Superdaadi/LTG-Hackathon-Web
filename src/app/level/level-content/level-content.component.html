@@ -1,41 +1,51 @@
-<div class="full">
-    <div class="scroll-area">
-        <div class="level-container">
-            <h2 class="level-title">{{level.heading}}</h2>
-        
-            @for (comp of level.level; track $index) {
-                <div class="component">
-                    @if (comp.type === 'img') {
-                        <img [src]="comp.image" alt="Level image" class="level-image subcomp" />
-                    }
+<form (submit)="inputSubmit(this.levelNumber)">
+    <div class="full">
+        <div class="scroll-area">
+            <div class="level-container">
+                <h2 class="level-title">{{level.heading}}</h2>
+            
+                @for (comp of level.level; track $index) {
+                    <div class="component">
+                        @if (comp.type === 'img') {
+                            <img [src]="comp.image" alt="Level image" class="level-image subcomp" />
+                        }
 
-                    @if (comp.type === 'text') {
-                        <p class="level-text subcomp">{{ comp.text }}</p>
-                    }
+                        @if (comp.type === 'text') {
+                            <p class="level-text subcomp">{{ comp.text }}</p>
+                        }
 
-                    @if (comp.type === 'input') {
-                        <input
-                            type="text"
-                            [placeholder]="comp.input"
-                            [name]="this.levelNumber"
-                            class="level-input subcomp"
-                        />
-                    }
+                        @if (comp.type === 'input') {
+                            <input
+                                type="text"
+                                [placeholder]="comp.input"
+                                name="Input"
+                                class="level-input subcomp"
+                                [(ngModel)]="input"
+                            />
+                            @if (this.levelNumber == 2) {
+                                <p class="invis">Der Code ist: "Ente"</p>
+                            }
+                        }
 
-                    @if (comp.type === 'link') {
-                        <button class="level-button subcomp" (click)="openLink(comp.link)">{{ comp.linkText }}</button>
-                    }
+                        @if (comp.type === 'link') {
+                            <button class="level-button subcomp" (click)="openLink(comp.link)">{{ comp.linkText }}</button>
+                        }
 
-                    @if (comp.type === 'file') {
-                        <button class="level-button subcomp" (click)="downloadFile(comp.link)">{{ comp.linkText }}</button>
-                    }
-                    
-                    
-                </div>
-            }
+                        @if (comp.type === 'file') {
+                            <button class="level-button subcomp" (click)="downloadFile(comp.link)">{{ comp.linkText }}</button>
+                        }
+
+                        @if (comp.type === 'vgap') {
+                            <div [style.height.rem]="comp.number" class="level-vgap subcomp"></div>
+                        }
+                        
+                    </div>
+                }
+                
+                <button class="level-button submit-button" type="submit">Submit ✅</button>
+            </div>
         </div>
     </div>
-</div>
-
+</form>
 
 
