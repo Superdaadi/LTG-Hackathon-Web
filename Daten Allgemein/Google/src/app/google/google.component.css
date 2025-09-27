@@ -1,0 +1,185 @@
+.background {
+    background: fixed;
+    background-color: rgb(32, 33, 36);
+    width: 100dvw;
+    height: 100dvh;
+}
+
+.navbar {
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    color: rgb(232, 232, 232);
+    display: flex;
+    flex-shrink: 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    height: 60px;
+    padding-bottom: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 6px;
+    unicode-bidi: isolate;
+}
+
+.Nleft, .Nright {
+    display: flex;
+    align-items: center;
+}
+.Nleft div {
+    margin-left: 20px;
+    color: rgb(232, 232, 232);
+    cursor: pointer;
+}
+.Nleft div:hover {
+    text-decoration: underline;
+}
+
+.Nright div {
+    margin-right: 20px;
+    cursor: pointer;
+}
+.gmail:hover {
+    text-decoration: underline;
+}
+.images:hover {
+    text-decoration: underline;
+}
+
+.apps-ico svg {
+    color: rgb(232, 232, 232);
+    width: 20px;
+}
+
+.login {
+    display: flex;
+    background-color: rgb(194, 231, 255);
+    color: black;
+    min-height: 40px;
+    min-width: 85px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+.login div {
+    margin-right: 0;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+
+
+
+.search-container {
+    margin-top: 80px;
+}
+.logo {
+    font-size: 80px;
+    font-weight: 520;
+    color: rgb(232, 232, 232);
+}
+.logo img {
+    max-height: 6.5rem;
+}
+.search-box {
+    margin-top: 20px;
+    background-color: #303134;
+    border: 1px solid #5f6368;
+    border-radius: 24px;
+    padding: 10px 20px;
+    width: 50%;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+.search-box input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    flex: 1;
+    padding-left: 20px;
+}
+.buttons {
+    margin-top: 10px;
+}
+.buttons button {
+    background-color: #303134;
+    color: rgb(232, 232, 232);
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.m_text {
+    margin-top: 12px;
+    color: rgb(232, 232, 232);
+    font-size: 12px;
+}
+
+a {
+    color: rgb(80, 167, 255);
+}
+
+.ico {
+    color: rgb(232, 232, 232);
+    height: 20px;
+    width: 20px;
+}
+.search_ico img {
+    width: 25px;
+    height: 25px;
+}
+.search_ico svg {
+    cursor: pointer;
+}
+.cam_ico {
+    margin-left: 12px;
+}
+
+
+
+
+
+.footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    font-size: 13.5px;
+}
+
+.footer div {
+    display: flex;
+    background-color: #181818;
+    padding: 5px;
+    padding-left: 18px;
+    color: rgb(232, 232, 232);
+}
+
+.footer_U {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_U div {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+

