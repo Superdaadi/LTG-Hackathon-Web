@@ -1,0 +1,205 @@
+<div class="full">
+    <div class="sidebar">
+        <div class="top">
+            <button 
+                class="finger _1" 
+                [ngClass]="{'fingerOut': buttonsOut[0]}" 
+                (click)="toggleButton(0)">
+                Google
+            </button>
+
+            <button 
+                class="finger" 
+                [ngClass]="{'fingerOut': buttonsOut[1]}" 
+                (click)="toggleButton(1)">
+                DevTools
+            </button>
+
+            <button 
+                class="finger" 
+                [ngClass]="{'fingerOut': buttonsOut[2]}" 
+                (click)="toggleButton(2)">
+                Datei erhalten
+            </button>
+
+            <button 
+                class="finger" 
+                [ngClass]="{'fingerOut': buttonsOut[3]}" 
+                (click)="toggleButton(3)">
+                Bildanalyse
+            </button>
+
+            <button 
+                class="finger" 
+                [ngClass]="{'fingerOut': buttonsOut[4]}" 
+                (click)="toggleButton(4)">
+                Log-Dateien
+            </button>
+
+            <button 
+                class="finger" 
+                [ngClass]="{'fingerOut': buttonsOut[5]}" 
+                (click)="toggleButton(5)">
+                Eingabeformular
+            </button>
+
+        </div>
+        
+        <div class="bottom">
+            <a class="exit" (click)="exit()" href="/landing">
+                AUSGANG ->
+            </a>
+        </div>
+    </div>
+
+    <div class="level-info">
+        <div class="display" [class.correct]="res[index].correct" [class.incorrect]="!res[index].correct">
+            @if (res[index].correct) {Richtig! Spitze}@else {Schade. Leider falsch!}
+        </div>
+
+        @if (index == 0) {
+            <div class="contentRes">
+                Traue nicht blind jedem Link, den du erhältst. Angreifer nutzen häufig Phishing oder täuschend echte Nachbauten von Webseiten, um an sensible Nutzerdaten zu gelangen. Ein Klick auf einen solchen Link kann dazu führen, dass Login-Daten, Passwörter oder andere persönliche Informationen in die Hände von Fremden geraten.
+                In diesem Beispiel hätte der Angreifer jetzt eure echten Login-Daten stehlen können. 
+            </div>
+            <div class="contentRes">
+                Tipps:
+            </div>
+            <div class="contentRes">
+                - Prüfe URLs genau, bevor du sie anklickst.
+            </div>
+            <div class="contentRes">
+                - Nutze Zwei-Faktor-Authentifizierung, wo immer möglich.
+            </div>
+            <div class="contentRes">
+                - Sei besonders vorsichtig bei E-Mails oder Nachrichten von unbekannten Absendern.
+            </div>
+            <div class="contentRes">
+                Sicherheit beginnt mit Aufmerksamkeit - jeder kleine Check schützt eure Daten!
+            </div>
+        }
+        @if (index == 1) {
+            <div class="contentRes">
+                Mit den Entwicklerwerkzeugen alles untersuchen
+            </div>
+            <div class="contentRes">
+                Dank der Entwicklerwerkzeuge moderner Browser kann man viele Informationen über eine Webseite herausfinden. Dazu gehören nicht nur die angezeigten Texte, sondern auch Cookies, Skripte, Netzwerkanfragen und andere technische Details.
+            </div>
+            <div class="contentRes">
+                Diese Tools sind extrem nützlich, um Webseiten zu analysieren, zu debuggen oder Sicherheitsrisiken zu erkennen. Gleichzeitig ist es wichtig, verantwortungsvoll damit umzugehen und keine Daten zu missbrauchen.
+            </div>
+        }
+        @if (index == 2) {
+            <div class="contentRes">
+                Vorsicht bei heruntergeladenen Dateien
+            </div>
+            <div class="contentRes">
+                Heruntergeladene Dateien sollte man niemals blind vertrauen. Besonders vorsichtig sollte man bei .bat-Dateien (Batch-Dateien) sein.
+            </div>
+            <div class="contentRes">
+                Diese Dateien können direkt Befehle auf der Windows-Kommandozeile ausführen und so Schaden anrichten – zum Beispiel Dateien löschen, Programme installieren oder persönliche Daten auslesen.
+            </div>
+            <div class="contentRes">
+                Tipps zum Schutz:
+            </div>
+            <div class="contentRes">
+                - Öffne Dateien nur von vertrauenswürdigen Quellen.
+            </div>
+            <div class="contentRes">
+                - Prüfe die Datei mit einem Antivirenprogramm, bevor du sie ausführst.
+            </div>
+            <div class="contentRes">
+                - Wenn möglich, teste Batch-Dateien in einer virtuellen Umgebung oder Sandbox.
+            </div>
+            <div class="contentRes">
+                Sicherer Umgang mit Dateien ist ein einfacher, aber wichtiger Schritt, um dein System und deine Daten zu schützen.
+            </div>
+        }
+        @if (index == 3) {
+            <div class="contentRes">
+                Bilder können geheime Informationen enthalten
+            </div>
+            <div class="contentRes">
+                Bilder eignen sich hervorragend, um kleine Informationen zu verstecken. Dies wird oft in der Steganographie genutzt, bei der Daten unauffällig in Bildern eingebettet werden, ohne dass sie auf den ersten Blick sichtbar sind.
+            </div>
+            <div class="contentRes">
+                Manchmal reicht es schon, genau hinzusehen oder spezielle Tools zu verwenden, um diese versteckten Informationen zu entdecken. Solche Techniken werden sowohl in der IT-Sicherheit als auch im digitalen Lernen eingesetzt, um Vertraulichkeit und Geheimnisse zu demonstrieren.
+            </div>
+            <div class="contentRes">
+                Tipps:
+            </div>
+            <div class="contentRes">
+                - Achte auf ungewöhnliche Bildgrößen oder Farbveränderungen.
+            </div>
+            <div class="contentRes">
+                - Nutze ggf. Tools, die Metadaten und eingebettete Daten analysieren können.
+            </div>
+        }
+        @if (index == 4) {
+            <div class="contentRes">
+                Log-Dateien verstehen - ein essentieller Skill
+            </div>
+            <div class="contentRes">
+                Log-Dateien sind Dateien, in denen Programme und Systeme wichtige Ereignisse, Fehlermeldungen oder Statusinformationen protokollieren. Sie sind ein unverzichtbares Werkzeug, um zu verstehen, was im System oder einer Anwendung passiert.
+            </div>
+            <div class="contentRes">
+                Das Lesen und Analysieren von Log-Dateien ist ein essentieller Skill für Entwickler und IT-Profis. So kann man schneller Fehler erkennen, Probleme beheben und die Performance verbessern.
+            </div>
+            <div class="contentRes">
+                Tipps:
+            </div>
+            <div class="contentRes">
+                - Achte auf Fehlermeldungen oder Warnhinweise.
+            </div>
+            <div class="contentRes">
+                - Nutze Filter- oder Suchfunktionen, um relevante Einträge schnell zu finden.
+            </div>
+            <div class="contentRes">
+                - Regelmäßige Logs helfen auch, Sicherheitsvorfälle frühzeitig zu erkennen.
+            </div>
+            <div class="contentRes">
+                Mit dem richtigen Umgang mit Log-Dateien wirst du effizienter und kannst Probleme deutlich schneller lösen – ein echter Vorteil für jede Programmier- oder IT-Karriere.
+            </div>
+        }
+        @if (index == 5) {
+            <div class="contentRes">
+                Virenschutz - warum er so wichtig ist
+            </div>
+            <div class="contentRes">
+                Ein zuverlässiger Virenschutz ist essenziell, um Computer und Daten vor Malware, Viren und Hackerangriffen zu schützen. Auch beim Surfen, Herunterladen von Dateien oder beim Öffnen von E-Mails können Gefahren lauern, die ungeschützte Systeme schnell infizieren.
+            </div>
+            <div class="contentRes">
+                Ein sehr bekannter Anbieter ist zum Beispiel Kaspersky, der seit vielen Jahren als Sicherheitssoftware auf dem Markt ist. Allerdings sollte man bei der Wahl von Sicherheitssoftware auch die Herkunft und mögliche geopolitische Risiken berücksichtigen, da Kaspersky seinen Ursprung in Russland hat.
+            </div>
+            <div class="contentRes">
+                Tipps für sicheren Schutz:
+            </div>
+            <div class="contentRes">
+                - Nutze aktuelle Antivirenprogramme und halte sie immer auf dem neuesten Stand.
+            </div>
+            <div class="contentRes">
+                - Ergänze den Schutz durch Firewall und regelmäßige Updates des Betriebssystems.
+            </div>
+            <div class="contentRes">
+                - Achte auf die Herkunft und Reputation der Sicherheitssoftware.
+            </div>
+            <div class="contentRes">
+                Ein bewusster Umgang mit Virenschutz sorgt dafür, dass deine Daten und Geräte sicher bleiben, ohne dass du ständig Angst vor Angriffen haben musst.
+            </div>
+        }
+
+
+        <div class="contentRes">
+            _________________________________________________________
+        </div>
+        <div class="contentRes">
+            Deine Eingabe lautet: "{{ res[index].input }}". Die Lösung ist: "{{ res[index].solution }}""
+        </div>
+        <div class="contentRes">
+            Deine Antwort ist also: @if (res[index].correct) {Richtig} @else {Falsch}
+        </div>
+
+    </div>
+    
+</div>
+

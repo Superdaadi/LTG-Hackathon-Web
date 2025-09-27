@@ -1,0 +1,36 @@
+Die Lösungen für die 6 Rätsel sind:
+
+Fake Login:
+- 1834
+
+nicht über den Phishing-Link öffnen, sondern über die Google Suche
+
+
+DevTools:
+- Ente
+
+Unter dem Inputfeld ist das Wort versteckt. Zu finden, durch Rechtsklick auf das Inputfeld und dann "Untersuchen"
+
+
+.bat Datei:
+- torvalds
+
+Datei "öffnen mit" und dann text-Editor. Dann der Kommentar
+
+
+Daten aus Bild:
+- a5lKmJkl
+
+in Windows rechtsklick auf heruntergeladenes Bild und dann "Eigenschaften" -> "Details" -> "Kommentar" -> Da ist der Code
+
+
+Log Datei:
+- Fingerprint
+
+[...] ALERT: "..." fingerprint
+
+
+Virenscanner:
+- Kaspersky
+
+Kasper und Himmel (sky)
