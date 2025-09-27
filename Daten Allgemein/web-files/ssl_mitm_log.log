@@ -1,0 +1,18 @@
+[2025-07-15 08:14:03] WARNING - SSL Certificate mismatch for domain: www.vr.de
+[2025-07-15 08:14:03] DETAILS - Expected Certificate Issuer: Raiffeisenbank eG
+[2025-07-15 08:14:03] DETAILS - Received Certificate Issuer: Laurin Eichenauer
+[2025-07-15 08:14:03] DETAILS - Subject CN: www.vr.de
+[2025-07-15 08:14:03] DETAILS - Issuer CN: www.vr.bank.de
+[2025-07-15 08:14:03] DETAILS - Serial Number: 3F:91:A4:C7:DE:11:8E
+[2025-07-15 08:14:03] DETAILS - Valid From: 2025-05-14 12:00:00 UTC
+[2025-07-15 08:14:03] DETAILS - Valid To:   2025-05-16 12:00:00 UTC
+[2025-07-15 08:14:03] DETAILS - Public Key Algorithm: RSA 2048 bits
+[2025-07-15 08:14:03] DETAILS - Fingerprint (SHA-256): 9F:42:DA:83:BC:74:F2:19:67:7E:DE:8F:44:AA:56:33:CD:BA:2F:9E:6D:02:4B:18:49:D2:5B:F3:78:98:9A:01
+[2025-07-15 08:14:03] DETAILS - SANs (Subject Alternative Names): login.www.vr.de, www.login.vr.de
+[2025-07-15 08:14:03] DETAILS - TLS Version: TLS 1.2
+[2025-07-15 08:14:03] DETAILS - OCSP Stapling: Not Present
+[2025-07-15 08:14:03] DETAILS - Certificate Revocation Status: Unable to verify (OCSP/CRL unreachable)
+[2025-07-15 08:14:03] DETAILS - Certificate Chain Length: 1 (no intermediate CA presented)
+[2025-07-15 08:14:03] ALERT   - Certificate does not match known fingerprint. Possible MITM in progress.
+[2025-07-15 08:14:03] ACTION  - HTTPS connection forcibly terminated to protect user credentials
+[2025-07-15 08:14:03] ACTION  - Certificate data logged for forensic analysis
