@@ -1,0 +1,96 @@
+/* Center container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fb;
+  font-family: Arial, sans-serif;
+}
+
+/* Card box */
+.login-card {
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(60, 64, 67, 0.15);
+  width: 350px;
+  text-align: left;
+}
+
+/* Google logo */
+.google-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.google-logo img {
+  width: 75px;
+}
+
+/* Title and subtitle */
+h1 {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  color: #5f6368;
+  font-size: 14px;
+  margin: 8px 0 24px 0;
+}
+
+/* Input field */
+.input-group {
+  margin-bottom: 10px;
+}
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Links */
+.link {
+  color: #1a73e8;
+  font-size: 14px;
+  text-decoration: none;
+}
+.link:hover {
+  text-decoration: underline;
+}
+
+.hint {
+  font-size: 12px;
+  color: #5f6368;
+  margin-top: 20px;
+  line-height: 1.4;
+}
+
+/* Actions row */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+}
+
+/* Next button */
+.btn-next {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn-next:hover {
+  background-color: #1669c1;
+}

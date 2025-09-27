@@ -1,0 +1,84 @@
+.full {
+    background-color:#323030;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* margin-top: 20px; */
+}
+
+.border {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1480px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.component {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    padding-top: 4rem;
+    background-color: transparent;
+    width: 80rem;
+    overflow: hidden;
+    
+
+
+    @media (max-width: 1650px) {
+        width: 80rem;
+    }
+    @media (max-width: 1400px) {
+        width: 60rem;
+    }
+    @media (max-width: 1000px) {
+        width: calc(100% - 48px);
+    }
+}
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 22rem;
+}
+.image img {
+    border-radius: 70px;
+    height: 20rem;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.316);
+}
+
+.logo img {
+    height: 20rem;
+}
+
+
+
+
+
+
+.ziel {
+    box-shadow: 0px 0px 10px 2px black;
+    background-color:var(--f2) ;
+    color: var(f1);
+    margin: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: left;
+    padding: 20px;
+    border-radius: 30px;
+    color: white;
+}
+
+.zielHead{
+    font-size: 42px;
+}
+
+.zielText{
+    font-size: 22px;
+}
